@@ -1,0 +1,10 @@
+.news {
+    color: green;
+    text-align: end;
+}
+
+@media (max-width:768px){
+    .news  {
+        text-align: left;
+    }
+}

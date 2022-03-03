@@ -1,0 +1,9 @@
+.title {
+    text-transform: uppercase;
+}
+@media (max-width:768px){
+    .title  {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}

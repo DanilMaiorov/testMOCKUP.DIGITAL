@@ -1,0 +1,9 @@
+.title {
+    text-transform: uppercase;
+    color: green;
+
+    @include ph {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}

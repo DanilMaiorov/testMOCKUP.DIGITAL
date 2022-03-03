@@ -1,0 +1,8 @@
+.news {
+    color: green;
+    text-align: end;
+
+    @include ph {
+        text-align: left;
+    }
+}

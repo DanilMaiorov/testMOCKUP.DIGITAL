@@ -1,0 +1,29 @@
+$baseFontSize: 32px;
+
+@mixin ph {
+    @media (max-width:768px){
+        @content;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-size: $baseFontSize;
+    font-family: Arial;
+    line-height: 1.5;
+    color: blue;
+    background-image: url('../img/eb96f5b6b0b4b1f0ac3a1018455c9b83.png');
+    background-attachment: fixed;
+    background-size: 20% 30%;
+    background-repeat: repeat-y;
+   
+    @include ph {
+        color: blue;
+        background-color: green;
+    }
+}
+@import './block/title.scss';
+@import './block/news.scss';
+//@import './block/*.scss'; //изза плагина sass-glob можем подключать файлы стилей через *
