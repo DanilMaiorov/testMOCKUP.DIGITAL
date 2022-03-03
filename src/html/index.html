@@ -1,62 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.min.css">
-    <script src="./js/main.js" defer></script>
-    <title>Document</title>
-</head>
+@@include('pieces/head.html', {
+    "title":"Главная"
+})
+<html lang="ru">
+
 <body>
     @@include("pieces/header.html")
-
-    <h1 class="title">INDEX</h1>
-    <img src="./img/sdfsdf.jpg" alt="modal">
-
-    <div class="section-about__block block-section-about">
-        <div data-da=".block-section-about__name,991.98,last" class="block-section-about__photo">
-            <img src="@img/main-photo.jpg" alt="daria-art-photo">
-        </div>
-        <div class="block-section-about__description">
-            <div class="block-section-about__name">
-                <div class="name-block">
-                    <div class="name"><span>Daria Maiorova <span class="block-section-about__name_heart">💗</span></span></div> 
-                    <p class="block-section-about__name_suffix">Your Digital Artist</p>
-                </div>
-            
-            </div>
-            <div class="block-section-about__text">
-                <span>Hello! Nice to Meet you! Let's work together! Be Happy! 💗</span>
-            </div>
-            <div class="block-section-about__socials socials-about">
-                <div class="socials-about__block">
-                    <ul class="socials-about__list">
-                        <li class="socials-about__item">
-                            <a class="socials-about__link" href="#">
-                                <img src="@img/icons/instagram.png" alt="icon-link-instagram">
-                            </a>
-                        </li>
-                        <li class="socials-about__item">
-                            <a class="socials-about__link" href="#">
-                                <img src="@img/icons/telegram.png" alt="icon-link-telegram">
-                            </a>
-                        </li>
-                        <li class="socials-about__item">
-                            <a class="socials-about__link" href="#">
-                                <img src="@img/icons/whatsapp.png" alt="icon-link-whatsapp">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <p class="news">LoreLore</p>
-    @@loop("pieces/news-item.html", "../../db/news.json") - проходится по массиву объектов, используя данные из них как переменные, и вставляет для каждого компонент. Может использовать JSON.
-
+    <main>
+        <h1>INDEX</h1>
+    </main>
     @@include("pieces/footer.html")
 </body>
 </html>

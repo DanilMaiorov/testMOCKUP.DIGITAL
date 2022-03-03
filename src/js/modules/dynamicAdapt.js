@@ -84,7 +84,7 @@ DynamicAdapt.prototype.moveTo = function (place, element, destination) {
 		return;
 	}
 	destination.children[place].insertAdjacentElement('beforebegin', element);
-}
+};
 // Функция возврата
 DynamicAdapt.prototype.moveBack = function (parent, element, index) {
 	element.classList.remove(this.daClassname);
@@ -93,7 +93,7 @@ DynamicAdapt.prototype.moveBack = function (parent, element, index) {
 	} else {
 		parent.insertAdjacentElement('beforeend', element);
 	}
-}
+};
 // Функция получения индекса внутри родителя
 DynamicAdapt.prototype.indexInParent = function (parent, element) {
 	const array = Array.prototype.slice.call(parent.children);

@@ -7,6 +7,7 @@
 //сборка под модули CommonJS 
 
 4) шаблонизатор npm i -D gulp-file-include (можем использовать конструкцию @@include, @@loop, @@for, @@if)
+@@loop("pieces/news-item.html", "../../db/news.json") - проходится по массиву объектов, используя данные из них как переменные, и вставляет для каждого компонент. Может использовать JSON.
 
 5) сжиматель html npm i -D gulp-htmlmin
 
