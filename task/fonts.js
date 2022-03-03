@@ -1,6 +1,4 @@
 import gulp from 'gulp';
-//src - откуда берем
-//dest - куда сохраняем
 
 //конфигурация 
 import path from '../config/path.js';

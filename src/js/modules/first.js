@@ -1,1 +1,3 @@
-module.exports = (a, b) => a + b;
+export function sum () {
+    console.log('first');
+}

@@ -5,7 +5,7 @@ export default {
     root: pathDest,
     html: {
         src: pathSrc + '/html/*.html',
-        watch: pathSrc + '/html/*.html',
+        watch: pathSrc + '/html/**/*.html',
         dest: pathDest
     },
     css: {

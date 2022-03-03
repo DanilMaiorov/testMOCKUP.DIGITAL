@@ -1,0 +1,6 @@
+.news {
+	font-size: rem(50);
+	color: red;
+
+	@include adaptiveValue("font-size", 50, 24, 992, 768);
+}

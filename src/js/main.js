@@ -1,3 +1,4 @@
-const sum = require('./modules/first.js');
+import "./modules/dynamicAdapt.js";
+import { sum } from './modules/first.js';
 
-console.log(sum(2, 10));
+sum();

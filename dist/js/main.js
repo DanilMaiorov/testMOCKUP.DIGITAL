@@ -1,1 +1,0 @@
-!function(){"use strict";const s=require("./modules/first.js");console.log(s(2,10))}();
