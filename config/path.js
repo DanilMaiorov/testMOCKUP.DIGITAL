@@ -3,11 +3,6 @@ const pathDest = './dist';
 
 export default {
     root: pathDest,
-    html: {
-        src: pathSrc + '/html/*.html',
-        watch: pathSrc + '/html/**/*.html',
-        dest: pathDest
-    },
     css: {
         src: pathSrc + '/css/*.css',
         watch: pathSrc + '/css/**/*.css',
@@ -32,10 +27,10 @@ export default {
         src: pathSrc + '/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
         watch: pathSrc + '/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}',
         dest: pathDest + '/fonts'
-    }
-/*     pug: {
+    },
+    pug: {
         src: pathSrc + '/pug/*.pug',
-        watch: pathSrc + '/pug/*.pug',
-        dest: pathDes
-    } */
+        watch: pathSrc + '/pug/**/*.pug',
+        dest: pathDest
+    } 
 };

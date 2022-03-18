@@ -23,7 +23,8 @@ function pug () {
         }))
     }))
     .pipe(gulpPug(app.pug))
-    .pipe(gulpWebpHtml())
+    /* .pipe(gulpWebpHtml()) */
     .pipe(gulp.dest(path.pug.dest));
 } 
+
 export default pug;

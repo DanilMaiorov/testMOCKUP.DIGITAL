@@ -14,54 +14,21 @@
 		display: block;
 	}
 }
-._icon-arrowdown:before {
-  content: "\e900";
+._icon-arrow-left:before {
+  content: "\1f324";
 }
-._icon-arrowup:before {
+._icon-arrow-right:before {
   content: "\e901";
 }
-._icon-cart:before {
+._icon-slider-arrow-right:before {
   content: "\e902";
 }
-._icon-compare:before {
-  content: "\e904";
-}
-._icon-favorite:before {
-  content: "\e90a";
-}
-._icon-favorite-yellow:before {
-  content: "\e90b";
-}
-._icon-footer-clock:before {
-  content: "\e90c";
-}
-._icon-footer-message:before {
-  content: "\e90e";
-}
-._icon-footer-phone:before {
-  content: "\e90f";
-}
-._icon-location:before {
-  content: "\e910";
-}
-._icon-logo:before {
-  content: "\e905";
-}
-._icon-rouble:before {
-  content: "\e906";
-}
-._icon-search:before {
-  content: "\e907";
-}
-._icon-star:before {
-  content: "\e908";
-}
-._icon-user:before {
-  content: "\e909";
-}
-._icon-arrow-back:before {
+._icon-ok:before {
   content: "\e903";
 }
-._icon-cart-header:before {
-  content: "\e90d";
+._icon-slider-arrow-left:before {
+  content: "\e904";
+}
+._icon-zoom:before {
+  content: "\e905";
 }

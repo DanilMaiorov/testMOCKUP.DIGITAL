@@ -1,0 +1,133 @@
+extends layout/app
+block page
+    .wrapper 
+        main.main
+            section.result__section.section-result
+                .section-result__container 
+                    .section-result__block.block-section-result
+                        .block-section-result__title
+                            h2 В результате Вы получаете:
+                            - let results = [{ image: './img/result-1.png', altImage:'result1', title: 'Защиту активов от рисков банкротства или захвата', text: 'Определим оптимальную структуру холдинга. Поможем переоформить активы и обязательства между новыми и существующими юрлицами холдинга, чтобы исключить риск потери активов.'},{ image: './img/result-2.png', altImage:'result2', title: 'Повышение управляемости и контроля в холдинге', text: 'Поможем выстроить полный контроль расходов и поступлений с точным "маршрутом" движения товаров и денег внутри холдинга. Определим "правила игры" для отдельных компаний холдинга, их показатели и функции, чтобы упростить управление и контроль холдинга.'},{ image: './img/result-3.png', altImage:'result3', title: 'Снижение затрат в т.ч. налога на прибыль и НДС', text: 'Определим один центр прибыли или один или несколько центров расходов, чтобы сократить НДС и налог на прибыль. А за счет централизации функций и упрощения управления уменьшим операционные расходы.'}]
+                            - let number = '1'
+                        .block-section-result__wrapper.wrapper-result
+                            each item in results
+                                .wrapper-result__item.item-result 
+                                    .item-result__image 
+                                        .item-result__image-cover
+                                            .image-block
+                                                img(src=`${item.image}` alt=`${item.altImage}`)
+                                                button.zoom._icon-zoom
+                                    .item-result__info.info-result
+                                        .info-result__number
+                                            span= number++
+                                        .info-result__title
+                                            h3= item.title
+                                        .info-result__description
+                                            span= item.text   
+                        .arrow-prev-top 
+                            button.arrow-prev-top__button
+                                p._icon-arrow-right
+                        .arrow-next-top
+                            button.arrow-next-top__button
+                                p._icon-arrow-right
+                        .block-section-result__counter 
+                            .counter-text-top
+                                p.result-number__curr 
+                                p.result-number__slash /
+                                p.result-number__total 
+            section.problems__section.section-problems
+                .section-problems__container
+                    .section-problems__block.block-section-problems
+                        .block-section-problems__title
+                            h2 Какие проблемы мы решаем
+                        .block-section-problems__content
+                            .block-section-problems__wrapper.wrapper-problems
+                                - let problemsPart1 = [{ FFFFFF: 'Резко вырастают налоги, или налоговая предъявляет претензии и штрафы'}, {F9F9FC: 'Реальный риск потери активов из-за банкротства или враждебного поглощения одной или нескольких компаний внутри холдинга'}, {F0F0F8: 'Нет ясности в прибыли холдинга в целом и отдельных компаний, непрозрачное движение денег и материальных ценностей между компаниями группы'}, {E6E5F1: 'Слишком много активов и денег в одной компании, что ставит под удар всю группу в случае неплатежей клиентов или блокировки счетов по этой компании.'}]
+                                each item in problemsPart1
+                                    each cValue, cKey in item
+                                        .wrapper-problems__item.item-problems(style={ background: '#' + cKey })
+                                            .item-problems__ok._icon-ok 
+                                            .item-problems__text 
+                                                span= cValue
+                            .block-section-problems__wrapper.wrapper-problems
+                                - let problemsPart2 = [{F9F9FC: 'Слишком большой налог на прибыль и НДС, потому что каждая компания группы самостоятельно реализует свою продукцию и услуги'}, {F0F0F8: 'Слишком много денег "замораживаются" в запасах сырья и расходных материалах, потому что каждая компания группы самостоятельно закупает у поставщиков'}, {E6E5F1: 'Высокие расходы на управление, потому что внутри холдинга слишком большой поток операций и документов, для обработки которых нужны новые люди и софт'}, {DCDAEA: 'Непонятно, как правильно распределить активы внутри группы и между соучредителями, чтобы получать кредиты на рост бизнеса'}]
+                                each item in problemsPart2
+                                    each cValue, cKey in item
+                                        .wrapper-problems__item.item-problems(style={ background: '#' + cKey })
+                                            .item-problems__ok._icon-ok 
+                                            .item-problems__text 
+                                                span= cValue
+                            .block-section-problems-adaptive__wrapper.wrapper-problems-adaptive                    
+                                - let problemsAdapt1 = [{ F5F6FB: 'Резко вырастают налоги, или налоговая предъявляет претензии и штрафы'}, {F5F6FB: 'Реальный риск потери активов из-за банкротства или враждебного поглощения одной или нескольких компаний внутри холдинга'}, {F5F6FB: 'Нет ясности в прибыли холдинга в целом и отдельных компаний, непрозрачное движение денег и материальных ценностей между компаниями группы' }]
+                                each item in problemsAdapt1
+                                    each cValue, cKey in item
+                                        .wrapper-problems-adaptive__item.item-problems-adaptive(style={ background: '#' + cKey })
+                                            .item-problems-adaptive__ok._icon-ok 
+                                            .item-problems-adaptive__text 
+                                                span= cValue
+                            .block-section-problems-adaptive__wrapper.wrapper-problems-adaptive
+                                - let problemsAdapt2 = [{F5F6FB: 'Слишком много активов и денег в одной компании, что ставит под удар всю группу в случае неплатежей клиентов или блокировки счетов по этой компании.'}, {F5F6FB: 'Слишком большой налог на прибыль и НДС, потому что каждая компания группы самостоятельно реализует свою продукцию и услуги'}, {F5F6FB: 'Слишком много денег "замораживаются" в запасах сырья и расходных материалах, потому что каждая компания группы самостоятельно закупает у поставщиков' }]
+                                each item in problemsAdapt2
+                                    each cValue, cKey in item
+                                        .wrapper-problems-adaptive__item.item-problems-adaptive(style={ background: '#' + cKey })
+                                            .item-problems-adaptive__ok._icon-ok 
+                                            .item-problems-adaptive__text 
+                                                span= cValue
+                            .block-section-problems-adaptive__wrapper.wrapper-problems-adaptive
+                                - let problemsAdapt3 = [{ F5F6FB: 'Высокие расходы на управление, потому что внутри холдинга слишком большой поток операций и документов, для обработки которых нужны новые люди и софт'}, {F5F6FB: 'Непонятно, как правильно распределить активы внутри группы и между соучредителями, чтобы получать кредиты на рост бизнеса' }]
+                                each item in problemsAdapt3
+                                    each cValue, cKey in item
+                                        .wrapper-problems-adaptive__item.item-problems-adaptive(style={ background: '#' + cKey })
+                                            .item-problems-adaptive__ok._icon-ok 
+                                            .item-problems-adaptive__text 
+                                                span= cValue
+                        .block-section-problems__counter 
+                            .counter-button
+                                button.problems-arrow__prev._icon-slider-arrow-left
+                            .counter-text
+                                p.problems-number__curr 
+                                p.problems-number__slash /
+                                p.problems-number__total 
+                            .counter-button    
+                                button.problems-arrow__next._icon-slider-arrow-left
+                        .block-section-problems__counter-adaptive
+                            .counter-button-adaptive
+                                button.problems-arrow__prev-adaptive._icon-slider-arrow-left
+                            .counter-text-adaptive
+                                p.problems-number__curr-adaptive 
+                                p.problems-number__slash-adaptive /
+                                p.problems-number__total-adaptive 
+                            .counter-button-adaptive   
+                                button.problems-arrow__next-adaptive._icon-slider-arrow-left
+            section.steps__section.section-problems
+                .section-steps__container
+                    .section-steps__block.block-section-steps
+                        .block-section-steps__title
+                            h2 Как мы это делаем
+                            - let steps = [{ image: './img/howdo-1.png', altImage:'step1', title: 'Бесплатная консультация', text: 'Уточняем задачу, отвечаем на Ваши вопросы, присылаем предложение по Вашему проекту.'},{ image: './img/howdo-2.png', altImage:'step2', title: 'Подписываем договор', text: 'В договоре фиксируем неразглашение конфиденциальных данных, условия работы, результат, сроки, нашу ответственность за результат и гарантии качества'},{ image: './img/howdo-3.png', altImage:'step3', title: 'Вырабатываем решение', text: 'Изучаем документы и бухгалтерские регистры, строим структуру владения активами и налогообложения. При необходимости встречаемся или созваниваемся. Создаем новую договорную цепочку владения активами; новую систему отношений с контрагентами; рассчитываем новые налоги.'},{ image: './img/howdo-4.png', altImage:'step4', title: 'Презентация решения', text: 'Показываем слабые места в структуре владения, налогообложения и управления. Предлагаем решение по оптимизации. Предоставляем пошаговый план оптимизации с подробной аналитической запиской.'},{ image: './img/howdo-5.png', altImage:'step5', title: 'Сопровождение оптимизации', text: 'Помогаем правильно переоформить документы, отвечаем на вопросы. Если включается Ваш юрист, консультируем его и проверяем правильность оформления документов.'},{ image: './img/howdo-6.png', altImage:'step6', title: 'Финансовый результат ', text: 'Налоги и штрафы уменьшаются уже в текущем отчетном периоде, так же как и риск потери активов из-за банкротства, рейдеров или вышедшего из-под контроля директора.'},]
+                            - let numTabs = '6'
+                            - let left = '5'
+                            - let num = '1'
+                            - let step = 'ШАГ '
+                        .block-section-steps__tabs.tabs-steps
+                            each item in steps 
+                                .tabs(style={left:`calc((96% / 6) * ${left--})`}).tabs-steps__item
+                                    .tabs-steps__item-text= step + numTabs--
+                        .block-section-steps__wrapper.wrapper-steps
+                            each item in steps 
+                                .wrapper-steps__item.item-steps
+                                    .item-steps__left.left-steps 
+                                        .left-steps__img
+                                            img(src=`${item.image}` alt=`${item.altImage}`)
+                                        .left-steps__title
+                                            h3= item.title
+                                        .left-steps__text
+                                            span= item.text
+                                    .item-steps__right.right-steps
+                                        p= step + num++
+                        .arrow-prev 
+                            button.arrow-prev__button
+                                p._icon-arrow-right
+                        .arrow-next
+                            button.arrow-next__button
+                                p._icon-arrow-right
